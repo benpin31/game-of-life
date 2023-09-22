@@ -8,7 +8,7 @@ export const useMouseDown = () => {
     document.addEventListener("mouseup", onMouseUp);
     return () => {
       document.removeEventListener("mousedown", onMouseDown);
-      document.removeEventListener("mouseup", onMouseDown);
+      document.removeEventListener("mouseup", onMouseUp);
     };
   }, []);
 
