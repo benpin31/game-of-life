@@ -2,7 +2,7 @@ import { MouseEvent } from "react";
 import clsx from "clsx";
 import { Grid } from "../models";
 import { giveBirthToCell, toggleCell } from "../utils";
-import { useMouthDown } from "../hooks/useMouthDown";
+import { useMouseDown } from "../hooks/useMouseDown";
 
 type GridRendererProps = {
   grid: Grid | null;
@@ -10,7 +10,7 @@ type GridRendererProps = {
 };
 
 export const GridRenderer = ({ grid, setGrid }: GridRendererProps) => {
-  const { isMouthDown } = useMouthDown();
+  const { isMouthDown } = useMouseDown();
 
   const onClickCell = (row: number, col: number) => {
     return (event: MouseEvent<HTMLElement>) => {

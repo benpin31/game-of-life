@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export const useMouthDown = () => {
+export const useMouseDown = () => {
   const isMouthDown = useRef<boolean>(false);
 
   useEffect(() => {
